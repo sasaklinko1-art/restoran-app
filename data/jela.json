@@ -1,0 +1,122 @@
+[
+  {
+    "id": "muejg03o120hgn7x",
+    "naziv": "Domaći ajvar i kajmak",
+    "opis": "Pečeni ajvar i kajmak sa domaćeg imanja, uz topao hleb.",
+    "cena": 390,
+    "kategorija": "Predjela",
+    "slika": "",
+    "aktivno": true,
+    "kreirano": "2026-09-23T20:11:05.988Z"
+  },
+  {
+    "id": "muejg03otiz67wfn",
+    "naziv": "Pihtije",
+    "opis": "Tradicionalne hladne pihtije, serviranje po domaćem receptu.",
+    "cena": 420,
+    "kategorija": "Predjela",
+    "slika": "",
+    "aktivno": true,
+    "kreirano": "2026-09-23T20:11:05.988Z"
+  },
+  {
+    "id": "muejg03o8zlr7cio",
+    "naziv": "Pršuta i sir tabla",
+    "opis": "Izbor domaćih suvomesnatih proizvoda i sireva.",
+    "cena": 690,
+    "kategorija": "Predjela",
+    "slika": "",
+    "aktivno": true,
+    "kreirano": "2026-09-23T20:11:05.988Z"
+  },
+  {
+    "id": "muejg03ogg82lb7l",
+    "naziv": "Teleća čorba",
+    "opis": "Polako kuvana, sa domaćim rezancima i svežim začinskim biljem.",
+    "cena": 480,
+    "kategorija": "Supe i čorbe",
+    "slika": "",
+    "aktivno": true,
+    "kreirano": "2026-09-23T20:11:05.988Z"
+  },
+  {
+    "id": "muejg03ozhssxuab",
+    "naziv": "Riblja čorba",
+    "opis": "Gusta čorba od rečne ribe, kuvana više sati.",
+    "cena": 520,
+    "kategorija": "Supe i čorbe",
+    "slika": "",
+    "aktivno": true,
+    "kreirano": "2026-09-23T20:11:05.988Z"
+  },
+  {
+    "id": "muejg03oqae67k1m",
+    "naziv": "Pasulj čorba",
+    "opis": "Domaći pasulj sa dimljenom slaninom.",
+    "cena": 440,
+    "kategorija": "Supe i čorbe",
+    "slika": "",
+    "aktivno": true,
+    "kreirano": "2026-09-23T20:11:05.988Z"
+  },
+  {
+    "id": "muejg03ow8eix7na",
+    "naziv": "Ćevapi od dva mesa",
+    "opis": "Deset komada, luk, kajmak i topao lepinja hleb.",
+    "cena": 780,
+    "kategorija": "Glavna jela",
+    "slika": "",
+    "aktivno": true,
+    "kreirano": "2026-09-23T20:11:05.988Z"
+  },
+  {
+    "id": "muejg03o42sj81l0",
+    "naziv": "Punjene paprike",
+    "opis": "Sa mlevenim mesom i pirinčem, u domaćem paradajz sosu.",
+    "cena": 690,
+    "kategorija": "Glavna jela",
+    "slika": "",
+    "aktivno": true,
+    "kreirano": "2026-09-23T20:11:05.988Z"
+  },
+  {
+    "id": "muejg03oft00fj84",
+    "naziv": "Teleći paprikaš",
+    "opis": "Sporo kuvano teleće meso u gustom paprikašu.",
+    "cena": 890,
+    "kategorija": "Glavna jela",
+    "slika": "",
+    "aktivno": true,
+    "kreirano": "2026-09-23T20:11:05.988Z"
+  },
+  {
+    "id": "muejg03o90g4w1eu",
+    "naziv": "Pastrmka na žaru",
+    "opis": "Sveža pastrmka, pečena na žaru uz limun i začinsko bilje.",
+    "cena": 950,
+    "kategorija": "Glavna jela",
+    "slika": "",
+    "aktivno": true,
+    "kreirano": "2026-09-23T20:11:05.988Z"
+  },
+  {
+    "id": "muejg03oii9on7s3",
+    "naziv": "Domaća baklava",
+    "opis": "Ručno rađena baklava sa orasima i medom.",
+    "cena": 350,
+    "kategorija": "Deserti",
+    "slika": "",
+    "aktivno": true,
+    "kreirano": "2026-09-23T20:11:05.988Z"
+  },
+  {
+    "id": "muejg03o97cpumop",
+    "naziv": "Palačinke sa orasima",
+    "opis": "Tanke palačinke punjene mlevenim orasima.",
+    "cena": 380,
+    "kategorija": "Deserti",
+    "slika": "",
+    "aktivno": true,
+    "kreirano": "2026-09-23T20:11:05.988Z"
+  }
+]
