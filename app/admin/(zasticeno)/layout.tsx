@@ -1,5 +1,6 @@
 import Link from "next/link";
 import OdjaviDugme from "./OdjaviDugme";
+import { restoran } from "@/lib/restoran";
 
 export default function ZasticeniAdminLayout({
   children,
@@ -11,8 +12,9 @@ export default function ZasticeniAdminLayout({
       <header className="border-b border-ember-900/40 bg-charcoal-800">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4">
           <Link href="/admin" className="font-serif text-lg text-ember-100">
-            Admin panel · Kod Stare Lipe
+            Admin panel · {restoran.naziv}
           </Link>
+
           <nav className="flex items-center gap-2 text-sm">
             <Link
               href="/admin"
@@ -20,6 +22,7 @@ export default function ZasticeniAdminLayout({
             >
               Rezervacije
             </Link>
+
             <Link
               href="/admin/meni"
               className="rounded-full border border-ember-900/40 px-4 py-1.5 text-ember-100/70 hover:border-ember-400"
@@ -27,9 +30,11 @@ export default function ZasticeniAdminLayout({
               Meni
             </Link>
           </nav>
+
           <OdjaviDugme />
         </div>
       </header>
+
       <main className="mx-auto max-w-6xl px-5 py-10">{children}</main>
     </div>
   );
