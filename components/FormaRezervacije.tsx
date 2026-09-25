@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { restoran } from "@/lib/restoran";
 
 const terminiVremena = Array.from({ length: 48 }, (_, i) => {
   const sati = String(Math.floor(i / 2)).padStart(2, "0");
@@ -14,6 +15,7 @@ export default function FormaRezervacije() {
     const godina = datum.getFullYear();
     const mesec = String(datum.getMonth() + 1).padStart(2, "0");
     const dan = String(datum.getDate()).padStart(2, "0");
+
     return `${godina}-${mesec}-${dan}`;
   }, []);
 
@@ -24,7 +26,9 @@ export default function FormaRezervacije() {
   const [vreme, setVreme] = useState("");
   const [brojGostiju, setBrojGostiju] = useState("2");
   const [napomena, setNapomena] = useState("");
-  const [trajanjeMinuta, setTrajanjeMinuta] = useState("120");
+  const [trajanjeMinuta, setTrajanjeMinuta] = useState(
+    String(restoran.rezervacije.trajanjeMinuta)
+  );
   const [uspesno, setUspesno] = useState("");
   const [greska, setGreska] = useState("");
   const [loading, setLoading] = useState(false);
@@ -61,7 +65,7 @@ export default function FormaRezervacije() {
       }
 
       setUspesno(
-        "Hvala vam na rezervaciji! Vaš zahtev je primljen. Potvrdićemo rezervaciju telefonom u najkraćem roku."
+        `Hvala vam na rezervaciji! Vaš zahtev je primljen. Tim restorana ${restoran.naziv} potvrdiće rezervaciju telefonom u najkraćem roku.`
       );
 
       setIme("");
@@ -71,7 +75,9 @@ export default function FormaRezervacije() {
       setVreme("");
       setBrojGostiju("2");
       setNapomena("");
-      setTrajanjeMinuta("120");
+      setTrajanjeMinuta(
+        String(restoran.rezervacije.trajanjeMinuta)
+      );
     } catch {
       setGreska("Došlo je do greške prilikom slanja rezervacije.");
     } finally {
@@ -160,7 +166,13 @@ export default function FormaRezervacije() {
             required
             className="w-full rounded-lg border border-ember-900/40 bg-charcoal-800 px-4 py-3 text-ember-50 outline-none focus:border-ember-400"
           >
-            {Array.from({ length: 30 }, (_, i) => i + 1).map((broj) => (
+            {Array.from(
+              {
+                length:
+                  restoran.rezervacije.maksimalnoGostijuPoRezervaciji,
+              },
+              (_, i) => i + 1
+            ).map((broj) => (
               <option key={broj} value={broj}>
                 {broj}
               </option>
@@ -203,6 +215,7 @@ export default function FormaRezervacije() {
             className="w-full rounded-lg border border-ember-900/40 bg-charcoal-800 px-4 py-3 text-ember-50 outline-none focus:border-ember-400"
           >
             <option value="">Izaberi vreme</option>
+
             {terminiVremena.map((termin) => (
               <option key={termin} value={termin}>
                 {termin}
