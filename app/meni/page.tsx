@@ -18,8 +18,8 @@ function grupisiPoKategoriji(jela: Jelo[]): Map<string, Jelo[]> {
   return grupe;
 }
 
-export default function MeniStranica() {
-  const svaJela = ucitajSvaJela();
+export default async function MeniStranica() {
+  const svaJela = await ucitajSvaJela();
   const aktivnaJela = svaJela.filter((j) => j.aktivno);
   const grupisano = grupisiPoKategoriji(aktivnaJela);
   const kategorije = Array.from(grupisano.keys()).sort();
