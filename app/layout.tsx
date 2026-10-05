@@ -18,6 +18,10 @@ export const metadata: Metadata = {
     canonical: restoran.url,
   },
 
+  verification: {
+    google: "hTzCaLqEqaTtGRsR0CXwg4Jtog_UWre5JZncdmfxd20",
+  },
+
   openGraph: {
     title: restoran.seo.title,
     description: restoran.seo.description,
