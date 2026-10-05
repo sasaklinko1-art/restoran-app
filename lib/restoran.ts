@@ -6,6 +6,7 @@ export const restoran = {
     "Tradicionalni restoran sa domaćom kuhinjom, svežim sastojcima i toplim ambijentom za porodične ručkove, proslave i rezervacije.",
   adresa: "Ulica i broj, Grad",
   grad: "Beograd",
+  url: "https://kod-stare-lipe.vercel.app",
   godinaOsnivanja: 1994,
   brojMesta: 80,
   ocena: "4.8/5",

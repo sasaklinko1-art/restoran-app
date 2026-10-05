@@ -3,9 +3,55 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { restoran } from "@/lib/restoran";
 
+const restaurantSchema = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": `${restoran.url}#restaurant`,
+  name: restoran.naziv,
+  url: restoran.url,
+  telephone: restoran.telefon,
+  email: restoran.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: restoran.adresa,
+    addressLocality: restoran.grad,
+    addressCountry: "RS",
+  },
+  servesCuisine: "Domaća kuhinja",
+  priceRange: "$$",
+  menu: `${restoran.url}/meni`,
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+      ],
+      opens: "12:00",
+      closes: "23:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday", "Sunday"],
+      opens: "12:00",
+      closes: "00:00",
+    },
+  ],
+};
+
 export default function PocetnaStranica() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(restaurantSchema),
+        }}
+      />
+
       <Navbar />
 
       <main>
@@ -82,6 +128,7 @@ export default function PocetnaStranica() {
               <p className="font-serif text-3xl text-ember-300">
                 {restoran.godinaOsnivanja}
               </p>
+
               <p className="mt-2 text-sm text-ember-100/60">
                 godina osnivanja
               </p>
@@ -91,6 +138,7 @@ export default function PocetnaStranica() {
               <p className="font-serif text-3xl text-ember-300">
                 {restoran.brojMesta}
               </p>
+
               <p className="mt-2 text-sm text-ember-100/60">
                 mesta u bašti i sali
               </p>
@@ -100,6 +148,7 @@ export default function PocetnaStranica() {
               <p className="font-serif text-3xl text-ember-300">
                 {restoran.ocena}
               </p>
+
               <p className="mt-2 text-sm text-ember-100/60">
                 prosečna ocena gostiju
               </p>
